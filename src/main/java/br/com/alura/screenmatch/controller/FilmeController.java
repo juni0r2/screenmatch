@@ -30,12 +30,9 @@ public class FilmeController {
 
     @PostMapping
     public String cadastraFilme(DadosCadastroFilme dados) {
-
         var filme = new Filme(dados);
-
         this.filmes.add(filme);
 
-        System.out.println(filmes);
-        return "/filmes/formulario";
+        return "redirect:/filmes";
     }
 }
